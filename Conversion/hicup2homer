@@ -101,8 +101,8 @@ foreach my $file (@files){
     my $readF = $_;
     my $readR = scalar <IN>;
 
-    my ($chromosomeF, $positionF, $strandF) = get_csome_position($readF);
-    my ($chromosomeR, $positionR, $strandR) = get_csome_position($readR);
+    my ($chromosomeF, $positionF, $strandF) = hicup_module::get_csome_position($readF);
+    my ($chromosomeR, $positionR, $strandR) = hicup_module::get_csome_position($readR);
   
     print OUT "$index\t$chromosomeF\t$positionF\t$strandF\t$chromosomeR\t$positionR\t$strandR\n";
     $index++;
